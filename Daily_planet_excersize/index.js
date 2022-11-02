@@ -10,7 +10,7 @@ just fix the existing ones.
 
 var Enemies=["Lex","Batman","Darkseid","Brainiac","General Zod","Doomsday"];
 
-funtion Who_Wins(is-there-kryptonite,enemy_name)
+funtion whoWins(is-there-kryptonite,enemy_name)
 {
 if (!is-there-kryptonite)
 {
@@ -22,7 +22,7 @@ else{
 }
     }
 
-for (var i=0;i<enemies.length;i++)
+for (var i = 0; i <enemies.length;i++)
 {
     var is_there_kryptonite:
     if (i%2=== 0) {
