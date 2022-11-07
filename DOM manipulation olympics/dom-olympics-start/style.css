@@ -22,7 +22,7 @@
     padding: 10px;
 }
 
-.message {
+.messages  {
     padding: 5px;
 }
 
@@ -35,3 +35,4 @@
     align-self: flex-start;
     background-color: burlywood;
 }
+
