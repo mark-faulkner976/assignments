@@ -15,6 +15,7 @@ document['addItem'].addEventListener('submit', function(event) {
     const edit = document.createElement('button')
     edit.innerHTML = 'Edit'
     edit.addEventListener('click', event =>{
+        
         if (event.target.textContent === 'Edit' ){
         const newInput = document.createElement('input')
         newInput.type = 'text'
