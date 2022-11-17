@@ -14,7 +14,7 @@ document['addItem'].addEventListener('submit', function(event) {
 
     const edit = document.createElement('button')
     edit.innerHTML = 'Edit'
-    edit.addEventListener('click', event =>{
+    edit.addEventListener('click', event => {
         
         if (event.target.textContent === 'Edit' ){
         const newInput = document.createElement('input')
@@ -43,7 +43,6 @@ document['addItem'].addEventListener('submit', function(event) {
         list.removeChild(li)
     })
     li.append(X)
-
 
 })
 
