@@ -27,4 +27,3 @@ function formAlert() {
 
 
 submit.addEventListener("click", formAlert);
-
