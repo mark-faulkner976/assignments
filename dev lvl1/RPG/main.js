@@ -1,9 +1,16 @@
 /*fight giving me issues
-hp for enemies arent being recognized once the loop activates? */
+hp for enemies arent being recognized once the loop activates? 
+it's fixed now but only if i put the variables inside the fight function?*/
 
 const readline = require("readline-sync")
 console.log('Welcome to the Colossal Adventure RPG! Prepare yourself adventurer!')
 
+let blazikenHP = 40
+let goatHP = 1
+let johnHP = 100
+
+// create array of enemies
+// const enemies  = [ {name: "", hp: 40} ...]
 
 let userHP = 40
 let inventory = []
@@ -12,7 +19,7 @@ let inventory = []
 const name = readline.question('Enter your name brave adventurer: ')
 
 if (name === '') {
-    return console.log('Please start over and enter a name!')
+    console.log('Please start over and enter a name!')
 } else {
     console.log('OK ' + name + ', prepare thineself!')
     console.log('press the w key to walk forward or p for your player information')
@@ -41,11 +48,9 @@ function encounter(){
     }
 
 function fight() {
-    let blazikenHP = 40
-    let goatHP = 1
-    let johnHP = 100
     let enemy = Math.floor(Math.random() * 3)
     console.log(enemy)
+    // let currentEnemt = enemies[enemy]
     if (enemy === 0 && userHP > 0){
         let action = readline.question("You've encountered a Blaziken!\n Will you fight (f) or run (r)?")
         if (action === 'f') {
