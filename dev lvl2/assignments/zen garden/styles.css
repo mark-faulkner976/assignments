@@ -1,9 +1,15 @@
 @import url(http://fonts.googleapis.com/css?family=Julius+Sans+One|Libre+Baskerville:400,400italic);
 
+*{
+    padding: 0;
+    margin: 0;
+}
+
 body{
     font-family: 'Libre Baskerville', sans-serif;
     background: linear-gradient(to right, #ffffff 0%,#ffffff 66%,#e5ede8 66%,#e5ede8 100%);
     font-size: 100%;
+    
 }
 
 nav {
@@ -15,49 +21,45 @@ nav {
     background-size: auto, auto, auto, cover;
     text-align: center;
     display: inline-grid;
-    grid-column: 1/5;
-    margin: 15px 0 0 0;
+    grid-column: 1/7;
     padding: 60px 0 50px 0;
     color: aliceblue;
+    border-top: solid 12px rgba(19, 67, 71, 0.8);
+    box-shadow: inset 0 0 100px rgba(255, 255, 255, 0.3)
    }
    
 #gridContainer{
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    background-color: #325050;
+    display: inline-grid;
+    grid-template-columns: auto auto auto auto auto auto;
 }
 
+
 h1::before{
-    display: inline-block;
+    display: inline-block; 
     position: relative;
     top: 20px;
     background-image: url(http://www.csszengarden.com/214/enso.svg);
     background-size: 100%;
     content: "";
-    width: 150px;
-    height: 150px;
+    width: 125px;
+    height: 125px;
     opacity: 0.7;
     margin: -20px 20px 30px 0;
 }
 
-h2::before{
-    content: "";
-    padding: 25px;
-}
-
 h1,
 h2 {
+ display: flex; 
  padding: 0 10%;
  margin: 0;
  color: #fff;
  font-weight: normal;
+ position: relative; top: -25px;
 }
 
 h1 {
- padding-top: 0;
- padding-bottom: 5px;
+ padding-top: 50px;
  margin-left: 80px;
- border-bottom: none;
  font-family: 'Julius Sans One', sans-serif;
  font-size: 3.2em;
  text-transform: uppercase;
@@ -66,28 +68,116 @@ h1 {
 h2{
     font-style: italic;
     color: rgba(255,255,255,0.6);
+    margin-left: 180px;
+}
+
+#design:hover{
+    color: #fff;
+    background-color: rgba(255,255,255,0.2);
 }
 
 #design {
-    grid-column: 4/5;
+    grid-column: 4/7;
+}
+
+#enlightenment::before{
+    background-color: #fff;
+    content: " ";
+}
+
+abbr{
+    letter-spacing: 0.01em;
+    font-size: 0.9em;
 }
 
 #enlightenment {
-    grid-column: 1/4;
+    display: inline-block;
+    text-align: left;
+    grid-column: 3/4;
+    background-color: #fff;
+    padding-top: 20px;
+    justify-content: center;
+    padding-left: 200px;
+}
+
+p{
+    margin: 0.75em;
+}
+
+a{
+    font-family: 'Julius Sans One', sans-serif;
+}
+
+h3{
+    font-family: 'Julius Sans One', sans-serif;
+    text-transform: uppercase;
+    color: #2d6360;
+    font-size: 1.8em;
+    padding: 25px 0 0 0;
+    margin: 0.30em;
 }
 
 #typeOfZen{
-    grid-column: 4/5;
+    grid-column: 4/7;
 }
 
 #participation{
-    grid-column: 1/4;
+    display: inline-block;
+    text-align: left;
+    grid-column: 3/4;
+    background-color: #fff;
+    padding-top: 20px;
+    justify-content: center;
+    padding-left: 200px;
+    background-attachment: scroll, scroll, fixed;
+    background-color: rgba(138,188,159,0.5);
+    background-image: url(http://www.csszengarden.com/214/contours-opaque.png), url(http://www.csszengarden.com/214/gridlines-opaque.png), url(http://www.csszengarden.com/214/bamboo.png);
+    background-repeat: repeat, repeat, no-repeat;
+    background-size: auto, auto, cover;
+}
+
+#bottomBenefits{
+    padding-bottom: 50px;
 }
 
 #faq{
-    grid-column: 4/5;
+    grid-column: 5/7;
 }
 
 #req{
-    grid-column: 1/4;
+    display: inline-block;
+    text-align: left;
+    grid-column: 3/4;
+    background-color: #fff;
+    padding-top: 20px;
+    justify-content: center;
+    padding-left: 200px;
+}
+
+#blank{
+    grid-column: 5/7;
+}
+
+#creator{
+    grid-column: 1/7;
+    background: #2d6360 50% 0 url(http://www.csszengarden.com/214/huntington.jpg) no-repeat;
+    background-image: url(http://www.csszengarden.com/214/contours.png), url(http://www.csszengarden.com/214/noise.png), url(http://www.csszengarden.com/214/gridlines.png), url(http://www.csszengarden.com/214/huntington.jpg);
+    background-attachment: fixed, fixed, fixed, scroll;
+    background-repeat: repeat, repeat, repeat, no-repeat;
+    background-position: 0 0, 0 0, -5px -25px, 0 50%;
+    background-size: auto, auto, auto, cover;
+    text-align: center;
+    display: inline-grid;
+    grid-column: 1/7;
+    padding: 60px 0 50px 0;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+#footer{
+    grid-column: 1/7;
+    
+}
+
+@media only screen and (maxwidth: 500px) {
+    
 }
