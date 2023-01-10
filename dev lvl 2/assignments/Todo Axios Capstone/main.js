@@ -76,26 +76,30 @@ function listData(data){
         })
 
         // edit bttn functionality, currently struggling with it
-        // editBtn.addEventListener('click', e => {
-        //     e.preventDefault()
+        editBtn.addEventListener('click', e => {
+            
 
-        //     console.log('edit btn working')
+            console.log('edit btn working')
 
-        //     if (e.target.textContent === 'Edit' ){
-        //         const newInput = document.createElement('input')
-        //         newInput.type = 'text'
-        //         newInput.value = li.textContent
-        //         newInput.id = 'newInput'
+            if (editBtn.textContent === 'Edit' ){
+                console.dir(li)
+                const newInput = document.createElement('input')
+                newInput.type = 'text'
+                newInput.value = li.children[0].textContent              
+                newInput.id = 'newInput'
+                li.append(newInput)
+                li.children[0] = newInput.value
+                editBtn.textContent = 'Save'
                 
-        //         edit.textContent = 'save'
-                
-        //     } else if (e.target.textContent === 'save'){
-        //         axios.put("https://api.vschool.io/markf/todo/" + data[i]._id, newInput)
-        //         .then(res => console.log(res.data))
-        //         .catch(err => console.log(err))
+            } else if (editBtn.textContent === 'Save'){
+                axios.put("https://api.vschool.io/markf/todo/" + data[i]._id, {title: newInput.value})
+                .then(res => {
+                    li.children[0].innerHTML = res.data.title
+                } )
+                .catch(err => console.log(err))
 
-        //     }
-        // })
+            }
+        })
 
         //adds elements to the form want to to it to the ul
         kappa.append(li)
