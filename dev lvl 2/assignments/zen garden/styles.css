@@ -227,12 +227,23 @@ li {
     grid-column: 1/7;
     padding: 60px 0 50px 0;
     color: rgba(255, 255, 255, 0.4);
+    font-size: 1.3rem;
 }
 
 #footer{
     grid-column: 1/7;
     
 }
+
+footer a::before {
+    font-family: 'verdemoderna';
+}
+
+footer a.zen-validate-html::before {content: "5";}
+footer a.zen-validate-css::before {content: "3";}
+footer a.zen-license::before {content: "c";}
+footer a.zen-accessibility::before {content: "a";}
+footer a.zen-github::before {content: "g";}
 
 @media only screen and (max-width: 500px) {
     #header {
